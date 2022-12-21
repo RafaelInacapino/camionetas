@@ -1,0 +1,55 @@
+{% extends 'base_usuario.html' %}
+
+
+
+
+
+{% block content %}
+
+<body class="cuerpo">
+    <div class= "row justify-content-center">
+        <div class = "col-sm-12 col-md-6 col-lg-8 col-xl-8">
+            <br>
+            <br>
+            <h1 class ="text-center"> Selecciona el vehículo a retornar </h1>
+            <br>
+            <br>
+            <div class="card">
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="/static/nissan.jpg" class="card-img-top" alt="..." style="height: 12em; width:20em;">
+                    <div class="card-body">
+                      <h5 class="card-title">Retorno de Vehículo Nissan</h5>
+                      <p class="card-text">Formulario de retornar un vehículo Nissan</p>
+                      <a href="{% url 'reserva_final1' %}" class="button-2">Ir a Retornar de Vehículo Nissan</a>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="card h-100">
+                    <img src="/static/peugeot.jpg" class="card-img-top" alt="..." style="height: 12em; width:20em;">
+                    <div class="card-body">
+                      <h5 class="card-title">Retorno de Vehículo Peugeot</h5>
+                      <p class="card-text">Formulario de retorno de vehículo Peugeot</p>
+                      <a href="{% url 'reserva_final2' %}" class="button-2">Ir a Retorno de Vehículo Peugeot</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <br>
+              
+            </div>
+            
+        </div>
+        <a href="{% url 'home_user' %}" class="button-4">Volver</a>
+        
+    </div>
+</body>
+
+
+{% endblock %}
+</html>
+
+

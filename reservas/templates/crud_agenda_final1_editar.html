@@ -1,6 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base_admin.html' %}
 
+
+
+
+
+{% block content %}
 
 <head>
     <meta charset="utf-8">
@@ -109,9 +113,13 @@
     <br>
     <div class="container">
         <br><br><br>
+        <h1>Modificar Datos</h1>
+        <br>
 
 
             <div class="row">
+                
+                   
                 <form method="post" action="" id="formulario1">
                     {% csrf_token %} 
                     <div class="form-group">
@@ -128,4 +136,6 @@
 
         </form>      
 </body>
+  
+  {% endblock %}
 </html>

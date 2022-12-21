@@ -1,4 +1,4 @@
-{% extends 'base_admin.html' %}
+{% extends 'base_usuario.html' %}
 
 
 
@@ -27,7 +27,7 @@
                             <hr size="4">
                         </div>
                         <br>
-                    <form action={% url "reserva_final2_Add" %} method="POST" enctype="multipart/form-data">
+                    <form action={% url "reserva_inicial2_Add" %} method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                         <br>
                         <div class="form-group">
@@ -61,7 +61,7 @@
                         <button type="submit" name="opcion" value="agregar" class="button-2">Enviar</button>  
                         <br>
                         <br>
-                        <button class="button-1" href="{% url 'home_admin' %}">Volver a Home</button>
+                        <a class="button-1" href="{% url 'home_user' %}">Volver a Home</a>
 
             
                     

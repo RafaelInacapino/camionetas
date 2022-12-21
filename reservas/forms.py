@@ -17,7 +17,7 @@ class RegisterUserForm(UserCreationForm):
                 help_text=(""))
     
     last_name = forms.CharField(label=("Apellido*"),
-                widget=forms.TextInput(attrs={'class':class_attr_inputs,'placeholder':'Ingresa tu nombre'}),
+                widget=forms.TextInput(attrs={'class':class_attr_inputs,'placeholder':'Ingresa tu apellido'}),
                 help_text=(""))
 
     email = forms.CharField(label=("Correo electrónico*"),
@@ -25,11 +25,11 @@ class RegisterUserForm(UserCreationForm):
                 help_text=(""))
 
     password1 = forms.CharField(label=("Contraseña*"),
-                widget=forms.PasswordInput(attrs={'class':class_attr_inputs,'placeholder':'Ingresa tu correo electrónico'}),
+                widget=forms.PasswordInput(attrs={'class':class_attr_inputs,'placeholder':'Ingresa tu contraseña'}),
                 help_text=(""))
     
     password2 = forms.CharField(label=("Confirme Contraseña*"),
-                widget=forms.PasswordInput(attrs={'class':class_attr_inputs,'placeholder':'Ingresa tu correo electrónico'}),
+                widget=forms.PasswordInput(attrs={'class':class_attr_inputs,'placeholder':'Repite tu contraseña'}),
                 help_text=(""))
 
     class Meta:
