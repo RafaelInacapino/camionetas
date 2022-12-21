@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.contrib.auth.views import LoginView
 from django.urls import path, include, re_path 
 from django.contrib.staticfiles.urls import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
@@ -23,6 +24,8 @@ from django.views.static import serve
 urlpatterns = [
     path('reservas/', include('reservas.urls')),
     path('admin/', admin.site.urls),
+    #Home Start Login
+    path('', LoginView.as_view()),
 ]
 
 
