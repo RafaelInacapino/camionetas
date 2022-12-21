@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cuerpo {
+    background-image: url(../Imagenes/fondoina.jpg);
+    background-size: cover;
+    
+}
+
+
+.form-login {
+    width: 400px;
+    height: 340px;
+    background: #f7fbffcc;
+    margin: auto;
+    margin-top: 280px;
+    box-shadow: 20px 13px 37px rgb(0, 0, 0);
+    padding: 20px 30px;
+    border-top: 4px solid #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+.form-login h5{
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+}
+
+.controls{
+    width: 100%;
+    text-align: center;
+    color: white;
+    border: 1px solid #ffffff;
+    margin-bottom: 15px;
+    padding: 11px 10px;
+    background: #252323;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.buttons {
+    width: 33.33%;
+    height: 40px;
+    background: #ff0000;
+    border: 1px solid white;
+    color: white;
+    margin-bottom: 16px;
+    border-radius: 20px;
+}
+
+.buttons:hover{
+    background-color: #3c3c3c;
+    cursor:pointer;
+}
+
+.form-login p{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.form-login a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.form-login a:hover{
+    text-decoration: underline;
+}
+

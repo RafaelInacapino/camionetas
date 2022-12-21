@@ -1,0 +1,71 @@
+{% extends "tdguitarras/base.html" %}
+
+
+{% block content %}
+
+
+
+<body>
+    
+<div class="row justify-content-center">
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-8">
+        <h1 class="text-center"> CRUD de Usuarios </h1>
+        <div class="card">
+            <div class="card-body">
+                <form action={% url "usuariosAdd" %} method="POST">
+                    
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="rut" class="form-control" placeholder="Rut">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" name="apellido_paterno" class="form-control" placeholder="Apellido Paterno">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" name="apellido_materno" class="form-control" placeholder="Apellido Materno">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" name="rut" class="form-control" placeholder="Nombre de usuario">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" name="nombre" class="form-control" placeholder="Contrasenia">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" name="fecha_nacimiento" class="form-control" placeholder="Fecha de Nacimiento (aaaa-mm-dd)">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <input type="text" name="genero" class="form-control" placeholder="Genero">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button type="submit" name="opcion" value="Agregar" class="btn btn-success btn-block text-white"> Guardar </button>
+                    </div>
+                    <br>
+                </form>
+                
+                    
+
+                <div class= "form-group">
+                    <a href = "{% url 'listar' %}" class="btn btn-success btn-block text-white"> Listar </a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4 col-xl-8">
+                    {{mensaje}}
+                </div>
+        </div>
+    </div>
+   
+
+</div>
+</body>    
+   
+{% endblock %}

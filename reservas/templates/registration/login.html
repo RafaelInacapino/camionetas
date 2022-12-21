@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Vehiculos</title>
+    <link rel="stylesheet" href="/static/registration/Css/Login.css">
+    
+</head>
+<body class="cuerpo">
+    {% if user.is_authenticated %}
+        <script>
+          window.location.replace("/reservas/home_user")
+        </script>
+    {% endif %}
+    <form method="post">
+        {% csrf_token %}
+        <section class="form-login">
+            <h5> Login / Entrar</h5>
+            <input class="controls" type="text" name="username" value="" placeholder="Usuario">
+            <input class="controls" type="password" name="password" value="" placeholder="Contraseña">
+        
+            <br>
+            <br>
+            <br>
+            <div style="text-align: center;">
+                <label><input type="checkbox" id="cbox1" value="first_checkbox"> Recordar datos</label><br>
+            </div>
+            
+            <br>
+            
+
+            <div style="text-align: center;">
+                <a>
+                    <button class="buttons" type="submit">Ingresar</button>
+                </a>
+            </div>
+            {% if form.errors %}
+            <p class="alert text-danger fw-bolder"> {{form.errors}} </p>
+            {% endif %}
+            
+        </section>
+    </form>
+</body>
+</html>
